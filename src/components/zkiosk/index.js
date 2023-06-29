@@ -8,9 +8,10 @@ const ZKiosk = () => {
 
     const buyProduct = (product) => {
         console.log("buy product...", product)
-        //해당 상품이 카트에 있는가?
+        // 해당 상품이 카트에 있는가?
         const targetArr = items.filter(item => item.pno === product.pno)
 
+        // 기존 상품 목록에, 새 상품 추가
         if(targetArr.length === 0 ){
             setItems([...items, {...product, qty: 1}])
             return
