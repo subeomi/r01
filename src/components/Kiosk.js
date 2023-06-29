@@ -13,8 +13,7 @@ const products = [
     { pno: 9, pname: '더블시그니처', price: 7000, imgFile: 'c9.png'},
     { pno: 10, pname: '바닐라플로트', price: 6000, imgFile: 'c10.png' },
     { pno: 11, pname: '아인슈페너', price: 9000, imgFile: 'c11.png' },
-    { pno: 12, pname: '카페모카', price: 8000, imgFile: 'c12.png' },
-    
+    { pno: 12, pname: '카페모카', price: 8000, imgFile: 'c12.png' }
 ]
 
 const getTotal = (arr) => {
@@ -99,7 +98,7 @@ const Kiosk = () => {
             </div>
             <div className="w-1/3">
                 <div className="text-4xl font-extrabold text-white">
-                <img className="w-auto h-20" src={`${process.env.PUBLIC_URL}/cart.jpg`}/>
+                <img className="w-auto h-14" src={`${process.env.PUBLIC_URL}/cart.jpg`}/>
                 </div>
                 <ul>
                     {items.map((item, idx) =>
