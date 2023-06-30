@@ -14,10 +14,21 @@ const Cart = ({id, pname, price}) => {
         if(!id || id === 0){
             return
         }
+        
         setItems([...items, {id, pname, price, qty:1}])
+        
+        // const targetArr = items.filter(item => item.id === id)
+    
+        // if(targetArr.length === 0){
+        //     return
+        // }
+        
+        // targetArr[0].qty += 1
+        // setItems([...items])
 
     // id, pname, price가 변경 시 useEffect 실행
     }, [id, pname, price])
+
 
     return ( 
         <div>

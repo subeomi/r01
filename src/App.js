@@ -1,4 +1,5 @@
 import Kiosk from "./components/kiosk/index";
+import Todo1 from "./components/todo1";
 
 
 
@@ -6,7 +7,7 @@ function App() {
 
   return (
     <div>
-      <Kiosk></Kiosk>
+      <Todo1></Todo1>
     </div>
   );
 }
