@@ -2,14 +2,34 @@ import axios from "axios"
 
 export const getList = async() => {
     
-    const rest = await axios.get(`http://localhost:8080/api/todos/list`)
+    const res = await axios.get(`http://localhost:8080/api/todos/list`)
 
-    return rest.data
+    return res.data
 }
 
 export const postTodo = async(todo) => {
 
-    const rest = await axios.post('http://localhost:8080/api/todos/', todo)
+    const res = await axios.post('http://localhost:8080/api/todos/', todo)
 
-    return rest.data
+    return res.data
+}
+
+export const getTodo = async(tno) => {
+
+    const res = await axios.get(`http://localhost:8080/api/todos/${tno}`)
+
+    return res.data
+}
+
+export const removeTodo = async(tno) => {
+
+    const res = await axios.delete(`http://localhost:8080/api/todos/${tno}`)
+
+    return res.data
+}
+
+export const putTodo = async(todo) => {
+    const res = await axios.put(`http://localhost:8080/api/todos/${todo.tno}`, todo)
+
+    return res.data
 }
